@@ -1,8 +1,22 @@
 package org.example.br.com.alura.alugames.modelo
 
-data class Jogo(val titulo: String, val capa: String) {
+import br.com.alura.alugames.modelo.Recomendavel
+
+data class Jogo(val titulo: String, val capa: String): Recomendavel {
     var descricao:String? = null
     var preco = 0.0
+    private val listaNotas = mutableListOf<Int>()
+
+    override val media: Double
+        get() = listaNotas.average()
+
+    override fun recomendar(nota: Int) {
+        if (nota > 10 || nota < 1) {
+            println("A nota deve ser de 1 a 10")
+        } else {
+            listaNotas.add(nota)
+        }
+    }
 
     constructor(titulo: String, capa: String, preco: Double, descricao: String):
             this(titulo, capa) {
@@ -15,6 +29,7 @@ data class Jogo(val titulo: String, val capa: String) {
                 "Título: $titulo\n" +
                 "Capa: $capa\n" +
                 "Descricao: $descricao\n" +
+                "Avaliação: $media\n" +
                 "Preço: $preco"
     }
 }
