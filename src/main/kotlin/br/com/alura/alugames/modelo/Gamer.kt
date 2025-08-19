@@ -2,8 +2,7 @@ package br.com.alura.alugames.modelo
 
 import br.com.alura.alugames.utilitario.formatoComDuasCasasDecimais
 import org.example.br.com.alura.alugames.modelo.Jogo
-import java.time.LocalDate
-import java.util.Scanner
+import java.util.*
 import kotlin.random.Random
 
 data class Gamer(var nome: String, var email: String): Recomendavel {
