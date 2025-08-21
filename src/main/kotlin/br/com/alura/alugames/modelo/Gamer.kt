@@ -64,7 +64,9 @@ data class Gamer(var nome: String, var email: String): Recomendavel {
                 "Data de Nascimento: $dataNascimento\n" +
                 "Usuario: $usuario\n" +
                 "Id Interno: $idInterno\n" +
-                "Reputação: $media"
+                "Reputação: $media\n" +
+                "Id: $id\n" +
+                "Plano: ${plano.tipo}"
     }
 
     fun criarIdInterno() {

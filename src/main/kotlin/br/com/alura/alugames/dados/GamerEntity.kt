@@ -9,6 +9,10 @@ class GamerEntity(
     val email: String = "gamer@email.com",
     val dataNascimento: String? = null,
     val usuario: String? = null,
+
+    @ManyToOne
+    val plano: PlanoEntity = PlanoAvulsoEntity(),
+
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     val id: Int = 0) {
 }
