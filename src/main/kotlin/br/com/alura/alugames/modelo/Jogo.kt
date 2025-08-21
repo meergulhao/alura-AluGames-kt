@@ -2,7 +2,6 @@ package org.example.br.com.alura.alugames.modelo
 
 import br.com.alura.alugames.modelo.Recomendavel
 import com.google.gson.annotations.Expose
-import javax.persistence.*
 
 data class Jogo(@Expose val titulo: String,
                 @Expose val capa: String): Recomendavel {
@@ -28,6 +27,7 @@ data class Jogo(@Expose val titulo: String,
             this(titulo, capa) {
                 this.preco = preco
                 this.descricao = descricao
+                this.id = id
             }
 
     override fun toString(): String {
