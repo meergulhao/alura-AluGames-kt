@@ -8,6 +8,7 @@ data class Aluguel(
     val gamer: Gamer,
     val jogo: Jogo,
     val periodo: Periodo) {
+    var id = 0
 
     val valorAluguel = gamer.plano.obterValor(this)
 
